@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://127.0.0.1:8000/predict/predictform/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
+    <title>Predict - Let's predict ! </title>
+
+    <link href="./Predict - Let's predict !_files/bootstrap.min.css" rel="stylesheet">
+    <link href="./Predict - Let's predict !_files/dashboard.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://127.0.0.1:8000/predict/">Predict</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://127.0.0.1:8000/predict/">Home</a></li>
+                    
+                        <li><a href="http://127.0.0.1:8000/accounts/logout/?next=/predict/">Logout</a></li>
+                        <li><a href="http://127.0.0.1:8000/accounts/password/change">Change My Passwprd</a></li>
+
+            
+
+
+              </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+                
+
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+           <div>
+                
+
+
+        <h1>predicting!</h1>
+
+        <form id="predict_form" method="post" action="./Predict - Let's predict !_files/Predict - Let's predict !.html">
+            <input type="hidden" name="csrfmiddlewaretoken" value="273kAqEuDZwPOjArL6V0VoeM4n5gbXLhqYokddAkoMje9nG5xM87hI82a9aSgzMZ">
+            
+                <input id="id_country" maxlength="16" name="country" type="hidden" value="NA">
+            
+
+            
+                
+                Please enter your GRE total score like 325
+                <input id="id_GRE" name="GRE" type="number" required="">
+            
+                
+                Please enter your GRE writing score like 3.5
+                <input id="id_GRE_W" name="GRE_W" step="any" type="number" required="">
+            
+                
+                Please enter your GPA like 90.24
+                <input id="id_GPA" name="GPA" step="any" type="number" required="">
+            
+                
+                Please enter your TOEFL score like 105
+                <input id="id_TF" name="TF" type="number" required="">
+            
+                
+                Please enter your TOEFL speaking score like 23
+                <input id="id_TF_S" name="TF_S" type="number" required="">
+            
+                
+                Please choose your interested major
+                <select id="id_major" name="major" required="">
+<option value="MIS">MIS</option>
+<option value="CS">CS</option>
+<option value="ALL">ALL</option>
+</select>
+            
+                
+                
+                <input id="id_country" maxlength="16" name="country" type="hidden" value="NA">
+            
+                
+                
+                <input id="id_result" maxlength="16" name="result" type="text" value="NA" required="">
+            
+                
+                Please enter your interested school like CMU
+                <input id="id_adschool" name="adschool" type="text" required="">
+            
+
+            <input type="submit" name="submit" value="Predicting">
+        </form>
+
+
+                </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./Predict - Let's predict !_files/jquery.min.js"></script>
+    <script src="./Predict - Let's predict !_files/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./Predict - Let's predict !_files/ie10-viewport-bug-workaround.js"></script>
+  
+</body></html>

@@ -1,0 +1,29 @@
+
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}add an apply {% endblock %}
+
+{% block body_block %}
+
+
+        <h1>add an apply</h1>
+
+        <form id="apply_form" method="post" action="/predict/applier/{{ student.username }}/add_apply/">
+
+            {% csrf_token %}
+            {% for hidden in form.hidden_fields %}
+                {{ hidden }}
+            {% endfor %}
+
+            {% for field in form.visible_fields %}
+                {{ field.errors }}
+                {{ field.help_text }}
+                {{ field }}
+            {% endfor %}
+
+            <input type="submit" name="submit" value="Create Apply" />
+        </form>
+
+{% endblock %}

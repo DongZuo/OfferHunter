@@ -1,0 +1,31 @@
+
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}applier {% endblock %}
+
+{% block body_block %}
+    <div class="page-header">
+    <h1>applier :{{ applier_name }}</h1>
+        {% if applier %}
+
+
+            {% if applys %}
+            <ul>
+                {% for apply in applys %}
+                <li>{{ apply.adschool }} {{ apply.GRE }}</li>
+                {% endfor %}
+            </ul>
+            {% else %}
+                <strong>No apply currently for applier.</strong>
+            {% endif %}
+        {% else %}
+            The specified applier {{ applier_name }} does not exist!
+        {% endif %}
+    {% if user.is_authenticated %}
+<a href="/predict/applier/{{ applier.username }}/add_apply/">add an apply</a>
+{% else %}
+{% endif %}
+    </div>
+{% endblock %}

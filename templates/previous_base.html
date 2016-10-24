@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>School-Hunter - {% block title %}Title{% endblock %}</title>
+    </head>
+
+    <body>
+
+        <hr />
+
+        <div>
+            <ul>
+            {% if user.is_authenticated %}
+            <h1>hello {{ user.username }}!</h1>
+            <a href="{% url 'auth_logout' %}?next=/predict/">Logout</a>      <a href="/accounts/password/change">Change My Passwprd</a>      <a href="/predict/">Back to Homepage</a>
+            {% else %}
+             <h1>Welcome to school-hunter !</h1>
+             <a href="{% url 'auth_login' %}">Login</a>      <a href="{% url 'registration_register' %}">Register</a>     <a href="/predict/">Back to Homepage</a>
+            {% endif %}
+
+
+
+            </ul>
+        </div>
+        <div>
+            {% block body_block %}{% endblock %}
+        </div>
+    </body>
+</html>

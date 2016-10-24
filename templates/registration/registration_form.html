@@ -1,0 +1,23 @@
+
+
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}registration{% endblock %}
+
+{% block body_block %}
+    <div class="container marketing">
+
+        <div class="col-xs-12 col-sm-6 placeholder">
+
+                </br></br></br></br></br>
+                <div class="page-header"><h1>Register Here</h1>
+</div>
+        <form method="post" action=".">
+                {% csrf_token %}
+                {{ form.as_p }}
+
+                <input type="submit" value="Submit" />
+        </form></div></div>
+{% endblock %}
