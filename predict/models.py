@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Student(models.Model):##一个申请人
+class Student(models.Model):##an applicant
 
 
     #StuId=models.IntegerField(default=0)##例如20160200001，02指MIS
