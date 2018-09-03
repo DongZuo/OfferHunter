@@ -5,16 +5,16 @@ from .models import Student,Apply#,PredUser
 class StudentForm(forms.ModelForm):## inherit the Modelform class
 
     #StuId=forms.IntegerField(widget=forms.HiddenInput(), initial=0)##例如20160200001，02指MIS,widget=forms.HiddenInput()就是不在页面上显示此栏的意思。
-    username=forms.CharField(max_length=64,help_text="Please enter the username")##一亩三分地用户名
+    username=forms.CharField(max_length=64,help_text="Please enter the username")
     GRE=forms.IntegerField( initial=0,help_text="Please enter the GRE score")##GREv+q
-    GRE_W=forms.FloatField(widget=forms.HiddenInput(),initial=0)##GRE writing,初始值是0，此时对应该变量在model里面的default也是0。
+    GRE_W=forms.FloatField(widget=forms.HiddenInput(),initial=0)##GRE writing
     GPA=forms.FloatField(initial=0,help_text="Please enter the GPA")##GPA
-    TF=forms.IntegerField(widget=forms.HiddenInput(), initial=0)##托福总分
-    major=forms.CharField(widget=forms.HiddenInput(),max_length=64,initial='NA')##本科专业
-    college=forms.CharField(widget=forms.HiddenInput(),max_length=64,initial='NA')##本科学校
-    exp=forms.CharField(widget=forms.HiddenInput(),max_length=128,initial='NA')##特殊经历
-    year=forms.CharField(widget=forms.HiddenInput(),max_length=64,initial='NA')##年份
-    country=forms.CharField(widget=forms.HiddenInput(),max_length=16,initial='NA')##国籍
+    TF=forms.IntegerField(widget=forms.HiddenInput(), initial=0)##toefl
+    major=forms.CharField(widget=forms.HiddenInput(),max_length=64,initial='NA')##major
+    college=forms.CharField(widget=forms.HiddenInput(),max_length=64,initial='NA')##school
+    exp=forms.CharField(widget=forms.HiddenInput(),max_length=128,initial='NA')##exprience
+    year=forms.CharField(widget=forms.HiddenInput(),max_length=64,initial='NA')##yaer
+    country=forms.CharField(widget=forms.HiddenInput(),max_length=16,initial='NA')##country
 
     class Meta:
         model=Student
